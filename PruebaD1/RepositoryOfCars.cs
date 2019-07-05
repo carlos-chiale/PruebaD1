@@ -50,5 +50,24 @@ namespace PruebaD1
                 return context.Cars.FirstOrDefault(theCar => theCar.Name == aNameOfCar);
             }
         }
+
+        public Car GetNewestCar()
+        {
+            using (var context = new MyContext())
+            {
+                Car[] arrayOfCars = context.Cars.OrderBy(item => item.DateOfCensus).ToArray();
+                return arrayOfCars[0];
+            }
+        }
+
+        public Car[] GetDateOfCensusOutOfDate()
+        {
+            using (var context = new MyContext())
+            {
+                return context.Cars.Where(item => item.DateOfCensus < DateTime.Now).ToArray();
+            }
+        }
+
+
     }
 }
