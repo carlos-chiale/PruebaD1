@@ -9,7 +9,7 @@ namespace PruebaD1
 {
     public class Car
     {
-        int Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public String Name { get; set; }
@@ -19,7 +19,7 @@ namespace PruebaD1
 
         public DateTime DateOfCensus { get; set; }
 
-        public List<Piece> Pieces { get; set; }
+        public ICollection<Piece> Pieces { get; set; }
 
         public Car(String aName, String aModel, DateTime aDateOfCensus)
         {

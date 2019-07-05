@@ -9,7 +9,7 @@ namespace PruebaD1
 {
     public class Piece
     {
-        int Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public String Name { get; set; }
