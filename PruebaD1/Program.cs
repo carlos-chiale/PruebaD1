@@ -18,6 +18,8 @@ namespace PruebaD1
             car1.Pieces.Add(piece1);
 
             repositoryOfCars.Add(car1);
+            repositoryOfCars.Add(car2);
+            repositoryOfCars.Add(car3);
 
         }
     }
