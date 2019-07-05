@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace PruebaD1
 {
-    public class Auto
+    public class Car
     {
-        String name { get; set; }
+        public String name { get; set; }
 
-        String model { get; set; }
+        public String model { get; set; }
 
-        DateTime dateOfCensus { get; set}
+        public DateTime dateOfCensus { get; set; }
+
+        public List<Piece> pieces { get; set; }
 
     }
 }
