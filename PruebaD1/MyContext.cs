@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PruebaD1
 {
-    public class Piece
+    class MyContext : DbContext
     {
-        public String name { get; set; }
-
-        public DateTime dateOfSupport { get; set; }
+        public DbSet<Car> Cars { get; set; }
     }
 }
