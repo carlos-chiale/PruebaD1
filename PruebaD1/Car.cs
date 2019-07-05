@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,13 +9,24 @@ namespace PruebaD1
 {
     public class Car
     {
-        public String name { get; set; }
+        int Id { get; set; }
 
-        public String model { get; set; }
+        [Required]
+        public String Name { get; set; }
 
-        public DateTime dateOfCensus { get; set; }
+        [Required]
+        public String Model { get; set; }
 
-        public List<Piece> pieces { get; set; }
+        public DateTime DateOfCensus { get; set; }
 
+        public List<Piece> Pieces { get; set; }
+
+        public Car(String aName, String aModel, DateTime aDateOfCensus)
+        {
+            Name = aName;
+            Model = aModel;
+            DateOfCensus = aDateOfCensus;
+            Pieces = new List<Piece>();
+        }
     }
 }
